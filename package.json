@@ -1,0 +1,13 @@
+{
+  "name": "the-formulate-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Formulate static storefront with Formspree checkout and Meta Pixel + Conversions API",
+  "type": "module",
+  "scripts": {
+    "assets": "node tools/build-assets.cjs",
+    "pages": "node tools/build-pages.cjs",
+    "preview": "npx serve . -l 3000",
+    "dev": "npx vercel dev"
+  }
+}
