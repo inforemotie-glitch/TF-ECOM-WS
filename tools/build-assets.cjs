@@ -20,11 +20,11 @@ const log = [];
 /* ---------- product posters: flatten, resize, webp ---------- */
 const PRODUCTS = [
   ['rosemary-hair-serum', 'Product Description/Rosemary Hair Growth Serum/Rosemary Hair Growth Serum.jpg'],
-  ['rosemary-essential-oil', 'Product Description/Rosemary Essential Oil/Rosemary Essential Oil.png'],
-  ['argan-oil', 'Product Description/Argan Essential Oil/Argan Essential Oil.png'],
-  ['jojoba-oil', 'Product Description/Jojoba Essential Oil/Jojoba Essential Oil.png'],
-  ['pumpkin-seed-oil', 'Product Description/Pumpkin Seed Essential Oil/Pumpkin Seed Essential Oil.png'],
-  ['peppermint-essential-oil', 'Product Description/Peppermint Essential Oil/Peppermint Essential Oil.png'],
+  ['rosemary-essential-oil', 'Product Description/Rosemary Essential Oil/Rosemary Essential Oil.jpg'],
+  ['argan-oil', 'Product Description/Argan Essential Oil/Argan Essential Oil.jpg'],
+  ['jojoba-oil', 'Product Description/Jojoba Essential Oil/Jojoba Essential Oil.jpg'],
+  ['pumpkin-seed-oil', 'Product Description/Pumpkin Seed Essential Oil/Pumpkin Seed Essential Oil.jpg'],
+  ['peppermint-essential-oil', 'Product Description/Peppermint Essential Oil/Peppermint Essential Oil.jpg'],
 ];
 
 for (const [slug, file] of PRODUCTS) {
