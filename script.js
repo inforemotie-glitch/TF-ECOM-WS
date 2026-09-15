@@ -16,7 +16,7 @@
       size: '50ml',
       price: 1249,
       compare: 1649,
-      img: '/assets/img/rosemary-hair-serum.webp',
+      img: '/assets/img/rosemary-hair-serum.webp?v=ac9962b7',
       url: '/products/rosemary-hair-serum',
     },
     'rosemary-essential-oil': {
@@ -27,7 +27,7 @@
       size: '30ml',
       price: 750,
       compare: 1150,
-      img: '/assets/img/rosemary-essential-oil.webp',
+      img: '/assets/img/rosemary-essential-oil.webp?v=1696404f',
       url: '/products/rosemary-essential-oil',
     },
     'pumpkin-seed-oil': {
@@ -38,7 +38,7 @@
       size: '30ml',
       price: 670,
       compare: 1150,
-      img: '/assets/img/pumpkin-seed-oil.webp',
+      img: '/assets/img/pumpkin-seed-oil.webp?v=664875c6',
       url: '/products/pumpkin-seed-oil',
     },
     'argan-oil': {
@@ -49,7 +49,7 @@
       size: '30ml',
       price: 870,
       compare: 1350,
-      img: '/assets/img/argan-oil.webp',
+      img: '/assets/img/argan-oil.webp?v=beea9952',
       url: '/products/argan-oil',
     },
     'jojoba-oil': {
@@ -60,7 +60,7 @@
       size: '30ml',
       price: 670,
       compare: 970,
-      img: '/assets/img/jojoba-oil.webp',
+      img: '/assets/img/jojoba-oil.webp?v=5a922112',
       url: '/products/jojoba-oil',
     },
     'peppermint-essential-oil': {
@@ -71,7 +71,7 @@
       size: '30ml',
       price: 550,
       compare: 990,
-      img: '/assets/img/peppermint-essential-oil.webp',
+      img: '/assets/img/peppermint-essential-oil.webp?v=85cefc02',
       url: '/products/peppermint-essential-oil',
     },
   };

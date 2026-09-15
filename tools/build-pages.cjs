@@ -88,6 +88,8 @@ function webpSize(file) {
   throw new Error(`Unrecognised WebP: ${file}`);
 }
 const img = (file) => ({ src: `/${file}`, ...webpSize(file) });
+// content hash so a re-uploaded poster defeats the 30-day asset cache
+const ver = (p) => `${p}?v=${fileHash(p.replace(/^\//, ''))}`;
 
 const IMG = {
   logo: img('assets/img/logo.webp'),
@@ -839,10 +841,10 @@ ${footer()}
 
 function productPage(p) {
   const canonical = `${SITE}${p.url}`;
-  const lg = `/assets/img/${p.id}-lg.webp`;
+  const lg = ver(`/assets/img/${p.id}-lg.webp`);
   const gallery = [
     { src: lg, alt: `${p.name} ${p.size}, The Formulate` },
-    ...p.gallery.map((g) => ({ src: `/assets/img/${g.file}.webp`, alt: g.alt })),
+    ...p.gallery.map((g) => ({ src: ver(`/assets/img/${g.file}.webp`), alt: g.alt })),
   ];
   const save = p.compare - p.price;
   const breadcrumb = {

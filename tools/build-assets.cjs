@@ -4,6 +4,7 @@
  * assets inside assets/img/. Requires ffmpeg on PATH. Run: node tools/build-assets.js
  */
 const { execFileSync } = require('child_process');
+const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 
@@ -120,6 +121,18 @@ for (const [slug] of PRODUCTS) {
   fs.unlinkSync(p);
 }
 fs.writeFileSync(path.join(ROOT, 'tools', 'lqip.json'), JSON.stringify(lqip, null, 2));
+
+/* ---------- stamp poster versions into the script.js catalog ---------- */
+// assets/img/ filenames stay stable across re-uploads, so without a content hash
+// the 30-day Cache-Control keeps returning visitors on the previous poster.
+const SCRIPT = path.join(ROOT, 'script.js');
+let script = fs.readFileSync(SCRIPT, 'utf8');
+for (const [slug] of PRODUCTS) {
+  const hash = crypto.createHash('md5').update(fs.readFileSync(out(slug + '.webp'))).digest('hex').slice(0, 8);
+  const re = new RegExp("(img: '/assets/img/" + slug + "\\.webp)(\\?v=[0-9a-f]{8})?'", 'g');
+  script = script.replace(re, "$1?v=" + hash + "'");
+}
+fs.writeFileSync(SCRIPT, script);
 
 console.log(log.join('\n'));
 console.log('\n--- assets/img ---');
